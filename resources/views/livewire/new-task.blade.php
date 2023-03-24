@@ -1,11 +1,23 @@
 <div>
     <input wire:model="newTask" type="text" placeholder="Add Your Task">
-    <button wire:click="addTask">Add Task </button><hr>
-
+    <button wire:click="addTask">Add Task </button>
+    <hr>
+    <div class="alert">
+        @error('newTask')
+            <div class="alert-danger">{{ $message }}</div>
+        @enderror
+    </div>
     <style>
         table {
             width: 100%;
             border-collapse: collapse;
+        }
+
+        .alert {
+            background: #000;
+            color: #cdd7a7;
+            text-align: center;
+            padding: 10px;
         }
 
         th,
