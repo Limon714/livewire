@@ -9,9 +9,12 @@
     @livewireStyles
 </head>
 <body>
-@livewire('post')
+{{-- @livewire('post')
 @livewire('data-componet')
 @livewire('submitform')
+@livewire('product-search') --}}
+
+@livewire('new-task')
 
       @livewireScripts
 </body>
