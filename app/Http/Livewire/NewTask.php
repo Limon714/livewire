@@ -16,6 +16,10 @@ class NewTask extends Component
         ]);
     }
    public function addTask(){
+     $this->validate([
+    'newTask'=>'required|max:10'
+    ]);
+       
     $task = new Task;
     $task->task=$this->newTask;
     $task->save();
