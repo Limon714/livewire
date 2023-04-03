@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\helloController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,22 @@ Route::get('/conn', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+
+
+
+
+
+
+Route::get('/hellocontroller', [helloController::class, 'hello']);
+Route::get('/hellocontroller', [helloController::class, 'hi']);
+Route::get('/mylara/{id}', [helloController::class, 'mylara']);
+Route::get('/home/{name}/{role}/{dept}', [helloController::class, 'multilara']);
+
+
+
+
+
 
 
 
